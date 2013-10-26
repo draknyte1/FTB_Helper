@@ -1,0 +1,74 @@
+name: FTBHelper
+main: com.gmail.mike546378.FTBHelper.FTBHelper
+version: 1.5
+commands:
+  FTBHelper:
+    description: Get info about the FTBHelper plugin.
+    usage: Usage.. /FTBHelper ? For a list all commands use /FTBHelper ?
+    permission:
+    permission-message: You don't have the required permissions to perform this action.
+  Halt:
+    description: halts a player
+    usage: Usage.. /Halt <PLayer>
+    permission:
+    permission-message: You don't have the required permissions to perform this action.
+  Unhalt:
+    description: Unhalts a player.
+    usage: Usage.. /Unhalt <player>
+    permission: []
+    permission-message: You don't have the required permissions to perform this action.
+  HaltList:
+    description: List all halted players.
+    usage: Usage.. /HaltList
+    permission: []
+    permission-message: You don't have the required permissions to perform this action.
+  DenyLogin:
+    description: stops a player from logging in.
+    usage: Usage.. /DenyLogin <PLayer>
+    permission: []
+    permission-message: You don't have the required permissions to perform this action.
+  AllowLogin:
+    description: Allows a player to login.
+    usage: Usage.. /AllowLogin <player>
+    permission: []
+    permission-message: You don't have the required permissions to perform this action.
+  DenyLoginList:
+    description: List all players being denied login.
+    usage: Usage.. /DenyLoginList
+    permission: []
+    permission-message: You don't have the required permissions to perform this action.
+  Vote:
+    description: Display vote links
+    usage: /Vote
+    permission: FTBHelper.vote
+    permission-message: You don't have the required permissions to perform this action.
+  BannedItems:
+    description: Display Banned Items
+    usage: /BannedItems
+    permission: FTBHelper.BannedItems
+    permission-message: You don't have the required permissions to perform this action.
+  Poll:
+    description: Start a poll
+    usage: /Poll create <polltype>
+    permission:
+    permission-message: You don't have the required permissions to perform this action.
+  IdFinder:
+    description: Find the id of blocks
+    usage: /IdFinder
+    permission:
+    permission-message: You don't have the required permissions to perform this action.
+  ToggleSpawn:
+    description: Toggles the spawning of mobs
+    usage: /ToggleSpawn
+    permission:
+    permission-message: You don't have the required permissions to perform this action.
+  FindEntities:
+    description: Gives a list of where the most entities are
+    usage: /FindEntities
+    permission:
+    permission-message: You don't have the required permissions to perform this action.
+  Debug:
+    description: for mike's debugging purposes
+    usage: /Debug
+    permission:
+    permission-message: You don't have the required permissions to perform this action.

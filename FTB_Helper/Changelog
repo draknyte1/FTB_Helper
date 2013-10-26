@@ -1,0 +1,12 @@
+Done:
+Fixed /findentities
+Added Update Notifier.
+Added config option for custom Auto-save delay.
+Added a reload argument to /FTBHelper for reloading the config file.
+
+In Progress:
+Fixed config.yml, now automatically updates
+
+Todo: 
+-Karma System
+-Ability to add banning of right or left clicking with an item. ex: FTBHelper.clickban.<left or right>.<itemId>.<DataValue>

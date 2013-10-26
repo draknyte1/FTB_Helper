@@ -1,0 +1,37 @@
+#Version Number, DO NOT EDIT
+version: 1.5
+
+#Items to display on use of /BannedItems
+BannedItems:
+  - Vajra (Grief)
+  - Portal Gun (Grief)
+  - Gravity Gun (Grief)
+  - Chunk Loaders (Lag)
+  - Mining Laser (Grief)
+  - Nuke (Grief)
+
+#Should the plugin broadcast a message containing player name and item id when someone tries to craft/use a banned item?
+BroadcastBanItem: true
+
+#Links to display on use of /Vote
+VoteLinks:
+  - http://ftbservers.com/server/3546/view/ftb-glass-gaming-com
+  - http://minecraftservers.org/server/81335
+  
+#Enable autosaves every min? (prevents rollbacks if the server crashes without saving)
+AutoSave: true
+  
+#The message a player recieves when they are denied login
+DenyLoginMessage: You are temporarily not allowed to login, please try again later
+
+#Number of items to display on use of /FindEntities
+No_Results-FindEntities: 15
+
+#Remove an item when it is inv banned
+DeleteInvBanItem: false
+
+#Drop Banned Items
+DropInvBanItem: true
+
+#Delay Between Polls (seconds)
+PollDelay: 120
