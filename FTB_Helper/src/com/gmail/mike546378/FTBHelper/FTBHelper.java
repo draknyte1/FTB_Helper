@@ -46,7 +46,7 @@ private Update.LoginListener UpdateChecker = new Update.LoginListener(this);
 		new AutoSave.autosave(this).saveall();
 		new Halt(this);
 		new DenyLogin(this);
-		this.getConfig().options().copyDefaults();
+		this.getConfig().options().copyDefaults(true);
 		this.saveConfig();
 		commandhandler();
 	}
