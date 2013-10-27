@@ -39,14 +39,15 @@ private int WeatherTaskID = 0;
 							
 							
 						//Generating appropriate message
-							String desc = plugin.getConfig().getString("Poll Message");
-							while(desc.contains("{") && desc.contains("}")){
-								int StartIndex = desc.indexOf("{");
-								int EndIndex = desc.indexOf("}") + 1;
+							String desc = plugin.getConfig().getString("PollMessage");
+							while(desc.contains("<") && desc.contains(">")){
+								int StartIndex = desc.indexOf("<");
+								int EndIndex = desc.indexOf(">") + 1;
 								String toBeReplaced = desc.substring(StartIndex, EndIndex);
-								if(toBeReplaced == "{name}"){
+								System.out.println(toBeReplaced);
+								if(toBeReplaced == "<name>"){
 									desc = desc.replace(toBeReplaced, sender.getName());
-								}else if(toBeReplaced == "{type}"){
+								}else if(toBeReplaced == "<type>"){
 									if(args[1].equalsIgnoreCase("DayTime")){
 										desc = desc.replace(toBeReplaced, "time to day");
 									}else if(args[1].equalsIgnoreCase("NightTime")){
@@ -58,6 +59,8 @@ private int WeatherTaskID = 0;
 									}else{
 										break;
 									}
+								}else{
+									break;
 								}
 							}
 						
@@ -72,7 +75,7 @@ private int WeatherTaskID = 0;
 										yes = 0;
 										no = 0;
 										Voters.clear();
-										Bukkit.broadcastMessage(ChatColor.GOLD + ""+sender.getName()+" has started a new poll to set time to day! Do you agree with "+sender.getName()+"? Use /poll yes or /poll no to submit your answer!!! Hurry, poll only lasts 30 seconds xD");
+										Bukkit.broadcastMessage(ChatColor.GOLD + desc);
 										Voters.add(sender.getName());
 										yes++;
 										plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
@@ -137,7 +140,7 @@ private int WeatherTaskID = 0;
 										yes = 0;
 										no = 0;
 										Voters.clear();
-										Bukkit.broadcastMessage(ChatColor.GOLD + ""+sender.getName()+" has started a new poll to clear the weather! Do you agree with "+sender.getName()+"? Use /poll yes or /poll no to submit your answer!!! Hurry, poll only lasts 30 seconds xD ");
+										Bukkit.broadcastMessage(ChatColor.GOLD + desc);
 										Voters.add(sender.getName());
 										yes++;
 										plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
@@ -199,7 +202,7 @@ private int WeatherTaskID = 0;
 										yes = 0;
 										no = 0;
 										Voters.clear();
-										Bukkit.broadcastMessage(ChatColor.GOLD + ""+sender.getName()+" has started a new poll to set time to night! Do you agree with "+sender.getName()+"? Use /poll yes or /poll no to submit your awnser!!! Hurry, poll only lasts 30 seconds xD ");
+										Bukkit.broadcastMessage(ChatColor.GOLD + desc);
 										Voters.add(sender.getName());
 										yes++;
 										plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
@@ -258,7 +261,7 @@ private int WeatherTaskID = 0;
 										yes = 0;
 										no = 0;
 										Voters.clear();
-										Bukkit.broadcastMessage(ChatColor.GOLD + ""+sender.getName()+" has started a new poll to set time to start a storm! Do you agree with "+sender.getName()+"? Use /poll yes or /poll no to submit your awnser!!! Hurry, poll only lasts 30 seconds xD ");
+										Bukkit.broadcastMessage(ChatColor.GOLD + desc);
 										Voters.add(sender.getName());
 										yes++;
 										plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {

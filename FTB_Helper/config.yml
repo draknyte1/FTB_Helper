@@ -18,8 +18,9 @@ VoteLinks:
   - http://ftbservers.com/server/3546/view/ftb-glass-gaming-com
   - http://minecraftservers.org/server/81335
   
-#Enable autosaves every min? (prevents rollbacks if the server crashes without saving)
+#Enable autosaves to occur at the set Delay? (prevents rollbacks if the server crashes without saving)
 AutoSave: true
+AutoSaveDelay: 60
   
 #The message a player receives when they are denied login
 DenyLoginMessage: You are temporarily not allowed to login, please try again later
@@ -36,5 +37,5 @@ DropInvBanItem: true
 #Delay Between Polls (seconds)
 PollDelay: 120
 
-#Message to delay on /poll (use {name} for player name and {type} for poll type ie. "time to day", "time to night", "weather to stormy" or "weather to clear")
-PollMessage: {name} has created a new poll to change the {type}! Do you agree with {name}? Hurry and submit your vote using /poll yes or /poll no! Polls only last 30 seconds so be quick :D
+#Message to delay on /poll (use <name> for player name and <type> for poll type ie. "time to day", "time to night", "weather to stormy" or "weather to clear")
+PollMessage: <name> has created a new poll to change the <type>! Do you agree with <name>? Hurry and submit your vote using /poll yes or /poll no! Polls only last 30 seconds so be quick :D
