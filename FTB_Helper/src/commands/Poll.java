@@ -37,6 +37,29 @@ private int WeatherTaskID = 0;
 					if(args.length == 2){
 						if(args[0].equalsIgnoreCase("create")){
 							
+							
+						//Generating appropriate message
+							String desc = plugin.getConfig().getString("Poll Message");
+							while(desc.contains("{") && desc.contains("}")){
+								int StartIndex = desc.indexOf("{");
+								int EndIndex = desc.indexOf("}") + 1;
+								String toBeReplaced = desc.substring(StartIndex, EndIndex);
+								if(toBeReplaced == "{name}"){
+									desc = desc.replace(toBeReplaced, sender.getName());
+								}else if(toBeReplaced == "{type}"){
+									if(args[1].equalsIgnoreCase("DayTime")){
+										desc = desc.replace(toBeReplaced, "time to day");
+									}else if(args[1].equalsIgnoreCase("NightTime")){
+										desc = desc.replace(toBeReplaced, "time to night");
+									}else if(args[1].equalsIgnoreCase("ClearWeather")){
+										desc = desc.replace(toBeReplaced, "weather to clear");
+									}else if(args[1].equalsIgnoreCase("Storm")){
+										desc = desc.replace(toBeReplaced, "weather to stormy");
+									}else{
+										break;
+									}
+								}
+							}
 						
 							
 							

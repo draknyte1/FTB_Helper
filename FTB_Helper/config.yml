@@ -21,7 +21,7 @@ VoteLinks:
 #Enable autosaves every min? (prevents rollbacks if the server crashes without saving)
 AutoSave: true
   
-#The message a player recieves when they are denied login
+#The message a player receives when they are denied login
 DenyLoginMessage: You are temporarily not allowed to login, please try again later
 
 #Number of items to display on use of /FindEntities
@@ -35,3 +35,6 @@ DropInvBanItem: true
 
 #Delay Between Polls (seconds)
 PollDelay: 120
+
+#Message to delay on /poll (use {name} for player name and {type} for poll type ie. "time to day", "time to night", "weather to stormy" or "weather to clear")
+PollMessage: {name} has created a new poll to change the {type}! Do you agree with {name}? Hurry and submit your vote using /poll yes or /poll no! Polls only last 30 seconds so be quick :D
