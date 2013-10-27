@@ -44,10 +44,9 @@ private int WeatherTaskID = 0;
 								int StartIndex = desc.indexOf("<");
 								int EndIndex = desc.indexOf(">") + 1;
 								String toBeReplaced = desc.substring(StartIndex, EndIndex);
-								System.out.println(toBeReplaced);
-								if(toBeReplaced == "<name>"){
+								if(toBeReplaced.equalsIgnoreCase("<name>")){
 									desc = desc.replace(toBeReplaced, sender.getName());
-								}else if(toBeReplaced == "<type>"){
+								}else if(toBeReplaced.equalsIgnoreCase("<type>")){
 									if(args[1].equalsIgnoreCase("DayTime")){
 										desc = desc.replace(toBeReplaced, "time to day");
 									}else if(args[1].equalsIgnoreCase("NightTime")){
