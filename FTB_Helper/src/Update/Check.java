@@ -21,6 +21,7 @@ public class Check {
 	int version;
 	String link;
 	String description;
+	String Sversion;
 	public boolean updateNeeded(){
 		try {
 			this.filesfeed = new URL("http://dev.bukkit.org/bukkit-plugins/ftbhelper/files.rss");
@@ -33,12 +34,13 @@ public class Check {
 			
 			Node latestfile = document.getElementsByTagName("item").item(0);
 			NodeList children = latestfile.getChildNodes();
+			Sversion = children.item(1).getTextContent().replaceAll("[a-zA-Z ]", "");
 			
-			version = Integer.parseInt(children.item(1).getTextContent().replaceAll("[a-zA-Z ]", ""));
+			version = Integer.parseInt(children.item(1).getTextContent().replaceAll("[a-zA-Z. ]", ""));
 			link = children.item(3).getTextContent();
 			description = children.item(5).getTextContent();
 			System.out.println(plugin.getName());
-			if(version > plugin.getConfig().getInt("version")){
+			if(version > Integer.parseInt(plugin.getConfig().getString("version").replaceAll("[ .]", ""))){
 				return true;
 			}
 		} catch (Exception e) {
@@ -49,8 +51,8 @@ public class Check {
 		return false;
 	}
 	
-	public int getVersion(){
-		return version;
+	public String getVersion(){
+		return Sversion;
 	}
 	
 	public String getLink(){

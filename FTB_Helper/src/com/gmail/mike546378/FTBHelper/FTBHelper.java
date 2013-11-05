@@ -28,7 +28,7 @@ private Update.LoginListener UpdateChecker = new Update.LoginListener(this);
 //When the plugin loads
 	@Override
 	public void onEnable() {
-		getLogger().info("Thank you for deciding to use " + getName());
+		getLogger().info("Thank you for deciding to use " + getName() + " with your server, have fun ^_^");
 		PluginManager pm = getServer().getPluginManager();
 		pm.registerEvents(this.DenyLoginListener, this);
 		pm.registerEvents(this.HaltListener, this);
@@ -49,12 +49,14 @@ private Update.LoginListener UpdateChecker = new Update.LoginListener(this);
 		this.getConfig().options().copyDefaults(true);
 		this.saveConfig();
 		commandhandler();
+		this.getConfig().set("version", "1.5.0");
+		this.saveConfig();
 	}
 	
 //When the plugin unloads
 	@Override
 	public void onDisable() {
-		getLogger().info("Goodbye");
+		getLogger().info("Farewell, hope to see you again soon ;)");
 		
 	}
 	

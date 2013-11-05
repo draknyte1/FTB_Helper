@@ -34,9 +34,9 @@ public class LoginListener implements Listener{
 					final Player player = ev.getPlayer();
 					plugin.getServer().getScheduler().scheduleSyncDelayedTask(plugin, new Runnable() {
 						public void run() {
-							player.sendMessage(ChatColor.BLUE+"---------------------------------------------");
-							player.sendMessage(ChatColor.BLUE+"---------"+ChatColor.AQUA+ "FTBHelper " + plugin.getConfig().getString("version") + " - By mike546378"+ChatColor.BLUE+"---------");
-							player.sendMessage(ChatColor.BLUE+"---------------------------------------------");
+							player.sendMessage(ChatColor.BLUE+"-------------------------------------------");
+							player.sendMessage(ChatColor.BLUE+"---------"+ChatColor.AQUA+ "FTBHelper V" + plugin.getConfig().getString("version") + " - By mike546378"+ChatColor.BLUE+"-------");
+							player.sendMessage(ChatColor.BLUE+"-------------------------------------------");
 							player.sendMessage(ChatColor.AQUA+"Version " + ChatColor.GREEN+CheckClass.getVersion() +ChatColor.AQUA+ " of FTBHelper is now avalible! Grab it now over at:");
 							player.sendMessage(ChatColor.GREEN+"http://dev.bukkit.org/bukkit-plugins/ftbhelper/files/"+ChatColor.AQUA+" for these new features!:");
 							player.sendMessage(ChatColor.GREEN+formatedDesc(CheckClass.getDescription()));
