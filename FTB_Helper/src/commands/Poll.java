@@ -163,7 +163,7 @@ private int WeatherTaskID = 0;
 												RecentWeatherPoll = true;
 												
 						//Wait configurable time before allowing for another poll
-												TimeTaskID = plugin.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, new BukkitRunnable() {
+												WeatherTaskID = plugin.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, new BukkitRunnable() {
 													@Override
 													public void run() {
 														if(RecentWeatherTimer >= plugin.getConfig().getInt("PollDelay")){
