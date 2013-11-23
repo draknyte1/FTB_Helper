@@ -4,6 +4,8 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.Bukkit;
+
+import Update.Updater;
 import FTBRestrict.onClickWithBannedItem;
 import commands.DenyLogin;
 import commands.Halt;
@@ -43,6 +45,7 @@ private Update.LoginListener UpdateChecker = new Update.LoginListener(this);
 		pm.registerEvents(this.InteractListener, this);
 		pm.registerEvents(this.UpdateChecker, this);
 		ToggleSpawn.dissableSpawnCmd.dissableSpawn = false;
+		Updater updater = new Updater(this, 62312, this.getFile(), Updater.UpdateType.DEFAULT, false);
 		new AutoSave.autosave(this).saveall();
 		new Halt(this);
 		new DenyLogin(this);
