@@ -27,7 +27,9 @@ private ItemLimiter.BlockPlaceListener LimiterBlockPlaceListener = new ItemLimit
 private FTBRestrict.onInteract InteractListener = new FTBRestrict.onInteract(this);
 private Update.LoginListener UpdateChecker = new Update.LoginListener(this);
 
-//When the plugin loads
+/**
+ * When the plugin loads
+ */
 	@Override
 	public void onEnable() {
 		getLogger().info("Thank you for deciding to use " + getName() + " with your server, have fun ^_^");
