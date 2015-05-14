@@ -1,4 +1,4 @@
 FTB_Helper
 ==========
 
-FTBHelper plugin for Minecraft servers running the FeedTheBeast along side bukkit
+Modified for use on my own personal server, many obsolete commands were removed. Also compiled against latest bukkit-api build.
